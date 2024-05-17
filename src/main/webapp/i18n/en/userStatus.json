@@ -1,0 +1,10 @@
+{
+  "jhipsterApp": {
+    "UserStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "PENDING": "PENDING",
+      "BLOCKED": "BLOCKED"
+    }
+  }
+}

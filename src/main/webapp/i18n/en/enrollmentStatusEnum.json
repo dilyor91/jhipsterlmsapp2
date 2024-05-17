@@ -1,0 +1,10 @@
+{
+  "jhipsterApp": {
+    "EnrollmentStatusEnum": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "REJECTED": "REJECTED",
+      "PENDING": "PENDING"
+    }
+  }
+}

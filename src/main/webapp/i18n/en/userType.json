@@ -1,0 +1,9 @@
+{
+  "jhipsterApp": {
+    "UserType": {
+      "null": "",
+      "STUDENT": "STUDENT",
+      "TEACHER": "TEACHER"
+    }
+  }
+}
