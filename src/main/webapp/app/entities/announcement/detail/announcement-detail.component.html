@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (announcement()) {
+      <div>
+        <h2 data-cy="announcementDetailsHeading"><span jhiTranslate="jhipsterApp.announcement.detail.title">Announcement</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ announcement()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.title">Title</span></dt>
+          <dd>
+            <span>{{ announcement()!.title }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.content">Content</span></dt>
+          <dd>
+            <span>{{ announcement()!.content }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.attachmentId">Attachment Id</span></dt>
+          <dd>
+            <span>{{ announcement()!.attachmentId }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.delayPost">Delay Post</span></dt>
+          <dd>
+            <span>{{ announcement()!.delayPost }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.postAt">Post At</span></dt>
+          <dd>
+            <span>{{ announcement()!.postAt | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.published">Published</span></dt>
+          <dd>
+            <span>{{ announcement()!.published }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterApp.announcement.announcement">Announcement</span></dt>
+          <dd>
+            @for (announcement of announcement()!.announcements; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/course-section', announcement.id, 'view']">{{ announcement?.id }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/announcement', announcement()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

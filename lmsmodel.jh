@@ -39,6 +39,15 @@ entity User{
 
 }
 
+entity Announcement {
+   title String required
+   content String required
+   attachmentId Long
+   delayPost Boolean
+   postAt Instant
+   published Boolean
+}
+
 enum EnrollmentStatusEnum {
    ACTIVE, REJECTED, PENDING
 }
@@ -60,6 +69,10 @@ relationship ManyToOne {
     CourseSection{course} to Course
     Enrollment{courseSection} to CourseSection
     Enrollment{course} to Course
+}
+
+relationship ManyToMany {
+    Announcement{announcement} to CourseSection{courseSection}
 }
 
 // Set pagination options

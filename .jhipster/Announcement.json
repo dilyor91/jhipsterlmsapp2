@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240520124246"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "attachmentId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "delayPost",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "postAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "published",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "Announcement",
+  "relationships": [
+    {
+      "otherEntityName": "courseSection",
+      "otherEntityRelationshipName": "courseSection",
+      "relationshipName": "announcement",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -19,7 +19,8 @@
       },
       "id": "ID",
       "sectionName": "Section Name",
-      "course": "Course"
+      "course": "Course",
+      "courseSection": "Course Section"
     }
   }
 }

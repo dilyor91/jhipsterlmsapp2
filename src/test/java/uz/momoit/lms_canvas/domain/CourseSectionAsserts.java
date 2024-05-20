@@ -59,6 +59,7 @@ public class CourseSectionAsserts {
     public static void assertCourseSectionUpdatableRelationshipsEquals(CourseSection expected, CourseSection actual) {
         assertThat(expected)
             .as("Verify CourseSection relationships")
-            .satisfies(e -> assertThat(e.getCourse()).as("check course").isEqualTo(actual.getCourse()));
+            .satisfies(e -> assertThat(e.getCourse()).as("check course").isEqualTo(actual.getCourse()))
+            .satisfies(e -> assertThat(e.getCourseSections()).as("check courseSections").isEqualTo(actual.getCourseSections()));
     }
 }

@@ -22,6 +22,7 @@ describe('CourseSection Form Service', () => {
             id: expect.any(Object),
             sectionName: expect.any(Object),
             course: expect.any(Object),
+            courseSections: expect.any(Object),
           }),
         );
       });
@@ -34,6 +35,7 @@ describe('CourseSection Form Service', () => {
             id: expect.any(Object),
             sectionName: expect.any(Object),
             course: expect.any(Object),
+            courseSections: expect.any(Object),
           }),
         );
       });

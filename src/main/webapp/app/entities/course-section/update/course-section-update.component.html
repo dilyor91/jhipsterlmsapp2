@@ -54,6 +54,23 @@
             }
           </select>
         </div>
+
+        <div class="mb-3">
+          <label for="field_courseSections" jhiTranslate="jhipsterApp.courseSection.courseSection">Course Section</label>
+          <select
+            class="form-control"
+            id="field_courseSections"
+            data-cy="courseSection"
+            multiple
+            name="courseSections"
+            formControlName="courseSections"
+            [compareWith]="compareAnnouncement"
+          >
+            @for (announcementOption of announcementsSharedCollection; track $index) {
+              <option [ngValue]="announcementOption">{{ announcementOption.id }}</option>
+            }
+          </select>
+        </div>
       </div>
 
       <div>
