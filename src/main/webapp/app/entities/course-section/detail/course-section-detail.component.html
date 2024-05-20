@@ -27,6 +27,15 @@
               </div>
             }
           </dd>
+          <dt><span jhiTranslate="jhipsterApp.courseSection.courseSection">Course Section</span></dt>
+          <dd>
+            @for (courseSection of courseSection()!.courseSections; track $index; let last = $last) {
+              <span>
+                <a [routerLink]="['/announcement', courseSection.id, 'view']">{{ courseSection?.id }}</a
+                >{{ last ? '' : ', ' }}
+              </span>
+            }
+          </dd>
         </dl>
 
         <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">

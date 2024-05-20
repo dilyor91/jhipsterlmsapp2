@@ -11,7 +11,8 @@
         "course": "Course",
         "courseSection": "Course Section",
         "accounts": "Accounts",
-        "enrollment": "Enrollment"
+        "enrollment": "Enrollment",
+        "announcement": "Announcement"
       },
       "account": {
         "main": "Account",

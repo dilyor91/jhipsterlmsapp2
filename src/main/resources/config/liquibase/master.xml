@@ -16,10 +16,12 @@
     <include file="config/liquibase/changelog/20240517093020_added_entity_Accounts.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240517093021_added_entity_Enrollment.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240517093022_added_entity_User.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240520124246_added_entity_Announcement.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20240517093018_added_entity_constraints_Course.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240517093019_added_entity_constraints_CourseSection.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20240517093021_added_entity_constraints_Enrollment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20240520124246_added_entity_constraints_Announcement.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

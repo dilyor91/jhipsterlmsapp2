@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -31,6 +33,11 @@ public class CourseSection implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnoreProperties(value = { "user" }, allowSetters = true)
     private Course course;
+
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "announcements")
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+    @JsonIgnoreProperties(value = { "announcements" }, allowSetters = true)
+    private Set<Announcement> courseSections = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -70,6 +77,37 @@ public class CourseSection implements Serializable {
 
     public CourseSection course(Course course) {
         this.setCourse(course);
+        return this;
+    }
+
+    public Set<Announcement> getCourseSections() {
+        return this.courseSections;
+    }
+
+    public void setCourseSections(Set<Announcement> announcements) {
+        if (this.courseSections != null) {
+            this.courseSections.forEach(i -> i.removeAnnouncement(this));
+        }
+        if (announcements != null) {
+            announcements.forEach(i -> i.addAnnouncement(this));
+        }
+        this.courseSections = announcements;
+    }
+
+    public CourseSection courseSections(Set<Announcement> announcements) {
+        this.setCourseSections(announcements);
+        return this;
+    }
+
+    public CourseSection addCourseSection(Announcement announcement) {
+        this.courseSections.add(announcement);
+        announcement.getAnnouncements().add(this);
+        return this;
+    }
+
+    public CourseSection removeCourseSection(Announcement announcement) {
+        this.courseSections.remove(announcement);
+        announcement.getAnnouncements().remove(this);
         return this;
     }
 

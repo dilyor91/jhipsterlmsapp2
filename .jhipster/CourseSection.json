@@ -19,6 +19,13 @@
       "relationshipName": "course",
       "relationshipSide": "left",
       "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "announcement",
+      "otherEntityRelationshipName": "announcement",
+      "relationshipName": "courseSection",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
     }
   ],
   "searchEngine": "no",

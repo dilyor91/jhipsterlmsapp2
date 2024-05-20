@@ -1,48 +1,49 @@
 import { IAccounts, NewAccounts } from './accounts.model';
 
 export const sampleWithRequiredData: IAccounts = {
-  id: 21122,
-  username: 'ha until',
-  fullName: 'actually remit',
-  sortableName: 'inside instantly now',
-  phone: '1-557-900-4179 x33924',
-  gender: 'wooden adolescent cheek',
+  id: 14959,
+  username: 'buckwheat ah',
+  fullName: 'rowboat',
+  sortableName: 'while',
+  phone: '361.527.6806',
+  gender: 'cheer silent',
   userType: 'TEACHER',
   userStatus: 'PENDING',
 };
 
 export const sampleWithPartialData: IAccounts = {
-  id: 22593,
-  username: 'after',
-  fullName: 'admire over',
-  sortableName: 'gosh welcome',
-  phone: '1-924-791-8531 x0148',
-  gender: 'bore oh when',
+  id: 16684,
+  username: 'beneath soulful',
+  fullName: 'worth when since',
+  sortableName: 'lest',
+  avatarImageUrl: 'gadzooks an weak',
+  phone: '510.388.5072',
+  gender: 'bah',
   userType: 'STUDENT',
   userStatus: 'BLOCKED',
 };
 
 export const sampleWithFullData: IAccounts = {
-  id: 6547,
-  username: 'uh-huh hop runny',
-  fullName: 'valuable who remand',
-  sortableName: 'pish makeup',
-  avatarImageUrl: 'however that boycott',
-  phone: '929-653-6558',
-  locale: 'misbehave unwieldy',
-  gender: 'instead woot yum',
+  id: 27168,
+  username: 'ha update',
+  fullName: 'than',
+  sortableName: 'greedily ouch lunge',
+  avatarImageUrl: 'quarrelsomely into walker',
+  phone: '700.353.9655 x4268',
+  locale: 'indelible soupy',
+  gender: 'beside',
   userType: 'STUDENT',
-  userStatus: 'ACTIVE',
+  userStatus: 'PENDING',
 };
 
 export const sampleWithNewData: NewAccounts = {
-  username: 'undervalue',
-  fullName: 'bah knowingly belch',
-  sortableName: 'indeed tragic large',
-  phone: '1-690-895-9261 x917',
-  gender: 'portfolio pelt',
+  username: 'until praises urgently',
+  fullName: 'rural extent light',
+  sortableName: 'from hence correspondence',
+  phone: '1-734-882-9923 x37191',
+  gender: 'since unlike wetly',
   userType: 'STUDENT',
-  userStatus: 'PENDING',
+  userStatus: 'BLOCKED',
   id: null,
 };
 

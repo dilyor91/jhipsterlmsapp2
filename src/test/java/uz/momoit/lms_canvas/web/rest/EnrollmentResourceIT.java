@@ -314,7 +314,7 @@ class EnrollmentResourceIT {
 
         partialUpdatedEnrollment
             .enrollmentStatus(UPDATED_ENROLLMENT_STATUS)
-            .lastActivityAt(UPDATED_LAST_ACTIVITY_AT)
+            .enrollmentStartAt(UPDATED_ENROLLMENT_START_AT)
             .enrollmentEndAt(UPDATED_ENROLLMENT_END_AT);
 
         restEnrollmentMockMvc
